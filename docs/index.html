@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio Jonas Eduardo</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/print.css" media="print">
     <link rel="icon" type="image/ico" href="../assets/icon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <header>
@@ -15,7 +17,8 @@
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#formacao">Formação</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li> <button id="idioma">Português</button> </li>
+                <li><button id="modo" aria-label="Modo claro e escuro"><i id="icone-modo" class="fa-solid fa-moon"></i></button></li>
+                <li><button id="idioma" aria-label="Alterar idioma">PT</button></li>
             </ul>
         </nav>
     </header>
@@ -30,21 +33,20 @@
 
     <section id="sessao-sobre">
         <h2 id="sobre-titulo">Sobre Mim</h2>
-        <p>Olá! Meu nome é Jonas Eduardo, sou um desenvolvedor Front End que está se desenvolvendo para se tornar Full Stack. Formado em Técnico em Informática integrado, tenho experiência em projetos pessoais e em grupos. Curso atualmente Ciência da Computação no IFSMG - Campus Rio Pomba.
-        </p>
+        <p>Olá! Meu nome é Jonas Eduardo, sou um desenvolvedor Front End que está se desenvolvendo para se tornar Full Stack. Formado em Técnico em Informática integrado, tenho experiência em projetos pessoais e em grupos. Curso atualmente Ciência da Computação no IFSMG - Campus Rio Pomba.</p>
     </section>
 
     <section id="projetos">
         <h2 id="projetos-titulo">Projetos</h2>
+        
         <div id="projetos-container">
-
             <div class="projetos-card">
                 <img src="../assets/img/album.png" alt="Gerenciador de Musicas" class="projetos-img">
                 <h3 class="projetos-nome">Gerenciador de Musicas</h3>
                 <p class="projetos-descricao">Projeto final para a disciplina de Programação Orientada a Objetos, utilizando Java Swing. Nele, é possível criar, ler e deletar músicas, álbuns e artistas, com janelas interativas.</p>
                 <a href="https://github.com/JonasEduard0/Projeto-MusicaArtistaAlbum" target="_blank">Repositório</a>
             </div>
-            
+
             <div class="projetos-card">
                 <img src="../assets/img/ingles.png" alt="Cafe com Ingles" class="projetos-img">
                 <h3 class="projetos-nome">Café com Inglês</h3>
@@ -69,25 +71,51 @@
     </section>
 
     <section id="formacao">
+        <h2 id="formacao-titulo">Formação</h2>
 
+        <div id="formacao-container">
+            <div class="formacao-card">
+                <h3 class="formacao-ano">2022 - 2024</h3>
+                <p class="formacao-descricao">Técnico em Informática Integrado ao Ensino Médio - IFSMG - Campus Rio Pomba</p>
+            </div>
+
+            <div class="formacao-card">
+                <h3 class="formacao-ano">2025 - </h3>
+                <p class="formacao-descricao">Ciência da Computação - IFSMG - Campus Rio Pomba</p>
+            </div>
+        </div>
     </section>
 
     <section id="contato">
         <h2 id="contato-titulo">Contato</h2>
+
+        <div id="contato-container">
+            <a href="https://github.com/JonasEduard0" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.instagram.com/jonaseduardo72/" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/jonas-ecmartins/" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://wa.me/5532998260319" target="_blank" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="mailto:jonaseduardo683@gmail.com" target="_blank" aria-label="Enviar e-mail">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
     </section>
 
     <footer>
-
+        <p>© 2026 Jonas Eduardo. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
-
-<!-- Site Portifólio (JS, HTML, CSS, futuramente: TS, Vue, Tailwind, NodeJS)
-Botão Modo Claro troca pra Escuro e vice-versa;
-Á direita, botão opção trocar Língua Pt para Inglês e vice-versa;
-Menu superior com Sobre(Resumo sobre mim e objetivo do portifolio), Projetos(Café com ingles, Musica-Album-Artista, Atualmente: FashionStore, Hinamizawa Village, Calculadora/etc), Formação(linha do tempo do tecnico ensino medio á computação), Contato e Redes;
-Print da tela faz print do curriculo;
-Responsivo. Mobile First, depois tablet notebook computador televisão.
--->
+</html>
