@@ -15,54 +15,201 @@ html{
 }
 
 :root{
-    --bg-claro: #f5f5f5;
-    --bg-escuro: #1f1e1e;
-    --texto-escuro: #222222;
-    --texto-claro: #ffffff;
-    --destaque: #0077ff;
-    --destaque-hover: #66bbff;
-    --destaque-escuro: #ff5522;
-    --destaque-escuro-hover: #a73917;
+    --bg-claro: #e2e2e2;
+    --bg-escuro: #0f172a;
+    --txt-claro: #e2e8f0;
+    --txt-escuro: #000d2c;
+    --detalhes: rgb(255,255,255,0.1);
+    --destaque: rgba(24, 34, 59, 0.8);
+    --txt-nome: #7c3aed;
 }
 
 body{
-    line-height: 1.5em;
-    background-color: var(--bg-claro);
-    color: var(--texto-escuro);
-    transition: background-color 0.4s, color 0.4s;
-}
-
-header{
-    background-color: var(--destaque);
-    color: var(--texto-claro);
-    padding: 10px;
-    justify-content: flex-end;
-    align-content: center;
-    position: fixed;
-}
-
-nav#menu ul{
-    list-style: none;
-    display:flex;
-    gap: 60px;
-}
-
-nav#menu a{
-    text-decoration: none;
-    color: var(--texto-claro);
-    font-weight: 400;
-    padding: 12px 15px;
-    transition: background-color 0.4s, color 0.4s;
-}
-
-nav#menu a:hover{
-    background-color: var(--destaque-hover);
-    color: var(--destaque);
-    border-radius: 5px;
-}
-
-body.escuro{
     background-color: var(--bg-escuro);
-    color: var(--texto-claro);
+    color: var(--txt-claro);
     transition: background-color 0.4s, color 0.4s;
 }
+
+#particula{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: radial-gradient(circle at 10% 20%, #4f46e5 0%, transparent 20%), radial-gradient(circle at 90% 80%, var(--txt-nome) 0%, transparent 25%), var(--bg-escuro);
+}
+
+#navegacao{
+    position: fixed;
+    background-color: rgba(15, 23, 42, 0.8);
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+#menu{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.menu-link{
+    text-decoration: none;
+    color: var(--txt-claro);
+    transition: color 0.3s;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #4f46e5, var(--txt-nome));
+    transition: width 0.4s ease;
+}
+
+.menu-link:hover::after{
+    width: 100%;
+}
+
+#foto{
+    width: 350px;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    border-radius: 50%;
+    border: 4px solid var(--destaque);
+    animation: flutuante 5s ease-in-out infinite;
+}
+
+#home{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#nome{
+    font-size: 3.5rem;
+    color: #4f46e5;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#descricao{
+    font-size: 1.8rem;
+    color: #4b4a4a;
+}
+
+#sessao-sobre{
+    padding: 6rem 3rem;
+    height: 50vh;
+}
+
+#sobre-titulo{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#sobre-container{
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--detalhes);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#sobre-texto{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#projetos{
+    padding: 6rem 2rem;
+}
+
+#projetos-titulo{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.projetos-card:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+}
+
+#projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+    gap: 2rem;
+}
+
+.projetos-card{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid black;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.projetos-img{
+    height: 300px;
+    width: 100%;
+    object-fit:fill; /* Faz oq? */
+}
+
+.projetos-nome{
+    margin-bottom: 5px;
+}
+
+.projetos-descricao{
+    color: #f5f5f5d0;
+    line-height: 1.25rem;
+}
+
+.conteudo-container{
+    padding: 1.5rem;
+    text-decoration: none;
+    
+}
+
+#formacao-titulo{
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+
+
+#contato{
+    padding: 6rem 2rem;
+}
+
+#contato-titulo{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+@keyframes flutuante{
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+

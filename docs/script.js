@@ -1,4 +1,4 @@
-const botao = document.getElementById('botao-tema');
+const botao = document.getElementById('modo');
 const body = document.body;
 
 const temasalvo = localStorage.getItem('tema');

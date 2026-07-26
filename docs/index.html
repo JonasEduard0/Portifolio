@@ -10,62 +10,74 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
+    <div id="particula"></div>
+
     <header>
-        <nav id="menu">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#contato">Contato</a></li>
+        <nav id="navegacao">
+            <ul id="menu">
+                <li><a href="#home" class="menu-link">Início</a></li>
+                <li><a href="#sessao-sobre" class="menu-link">Sobre</a></li>
+                <li><a href="#projetos" class="menu-link">Projetos</a></li>
+                <li><a href="#formacao" class="menu-link">Formação</a></li>
+                <li><a href="#contato" class="menu-link">Contato</a></li>
                 <li><button id="modo" aria-label="Modo claro e escuro"><i id="icone-modo" class="fa-solid fa-moon"></i></button></li>
                 <li><button id="idioma" aria-label="Alterar idioma">PT</button></li>
             </ul>
         </nav>
     </header>
 
-    <main id="sobre">
-        <div>
-            <img src="../assets/img/perfil.png" alt="Foto de Perfil" class="foto">
-            <h1>Jonas Eduardo</h1>
-            <p>Desenvolvedor Front End seguindo para Full Stack</p>
-        </div>
+    <main id="home">
+        <img src="../assets/img/perfil.png" alt="Foto de Perfil" id="foto">
+        <h1 id="nome">Jonas Eduardo</h1>
+        <p id="descricao">Desenvolvedor Front-End seguindo para Full-Stack</p>
     </main>
 
     <section id="sessao-sobre">
         <h2 id="sobre-titulo">Sobre Mim</h2>
-        <p>Olá! Meu nome é Jonas Eduardo, sou um desenvolvedor Front End que está se desenvolvendo para se tornar Full Stack. Formado em Técnico em Informática integrado, tenho experiência em projetos pessoais e em grupos. Curso atualmente Ciência da Computação no IFSMG - Campus Rio Pomba.</p>
+        <div id="sobre-container">
+        <p id="sobre-texto">Olá! Meu nome é Jonas Eduardo, sou um desenvolvedor Front End que está se desenvolvendo para se tornar Full Stack. Formado em Técnico em Informática integrado, tenho experiência em projetos pessoais e em grupos. Curso atualmente Ciência da 
+        Computação no IFSMG - Campus Rio Pomba.</p>
+        </div>
     </section>
 
     <section id="projetos">
         <h2 id="projetos-titulo">Projetos</h2>
-        
+
         <div id="projetos-container">
             <div class="projetos-card">
                 <img src="../assets/img/album.png" alt="Gerenciador de Musicas" class="projetos-img">
-                <h3 class="projetos-nome">Gerenciador de Musicas</h3>
-                <p class="projetos-descricao">Projeto final para a disciplina de Programação Orientada a Objetos, utilizando Java Swing. Nele, é possível criar, ler e deletar músicas, álbuns e artistas, com janelas interativas.</p>
-                <a href="https://github.com/JonasEduard0/Projeto-MusicaArtistaAlbum" target="_blank">Repositório</a>
+                <div class="conteudo-container">
+                    <h3 class="projetos-nome">Gerenciador de Musicas</h3>
+                    <p class="projetos-descricao">Projeto final para a disciplina de Programação Orientada a Objetos, utilizando Java Swing. Nele, é possível criar, ler e deletar músicas, álbuns e artistas, com janelas interativas.</p>
+                    <a href="https://github.com/JonasEduard0/Projeto-MusicaArtistaAlbum" target="_blank">Repositório</a>
+                </div>
             </div>
 
             <div class="projetos-card">
                 <img src="../assets/img/ingles.png" alt="Cafe com Ingles" class="projetos-img">
-                <h3 class="projetos-nome">Café com Inglês</h3>
-                <p class="projetos-descricao">Projeto de extensão como bolsista. Ensino do inglês básico ao avançado aberto a comunidade.</p>
-                <a href="https://www.instagram.com/cafecominglesif/" target="_blank">Instagram do projeto</a>
+                <div class="conteudo-container">
+                    <h3 class="projetos-nome">Café com Inglês</h3>
+                    <p class="projetos-descricao">Projeto de extensão como bolsista. Ensino do inglês básico ao avançado aberto a comunidade.</p>
+                    <a href="https://www.instagram.com/cafecominglesif/" target="_blank">Instagram do projeto</a>
+                </div>
             </div>
 
             <div class="projetos-card">
                 <img src="../assets/img/fashion.png" alt="FashionStore" class="projetos-img">
-                <h3 class="projetos-nome">FashionStore</h3>
-                <p class="projetos-descricao">Sistema para digitalizar processos de gestão de uma loja de roupas, em Java. Atualmente em desenvolvimento por meu grupo de estudos freelancer RootDevs.</p>
-                <a href="https://github.com/Root-devs-Grupo-de-estudos/Fashion-Store" target="_blank">Repositório(em desenvolvimento, aberto em breve)</a>
+                <div class="conteudo-container">
+                    <h3 class="projetos-nome">FashionStore</h3>
+                    <p class="projetos-descricao">Sistema para digitalizar processos de gestão de uma loja de roupas, em Java. Atualmente em desenvolvimento por meu grupo de estudos freelancer RootDevs.</p>
+                    <a href="https://github.com/Root-devs-Grupo-de-estudos/Fashion-Store" target="_blank">Repositório(em desenvolvimento, aberto em breve)</a>
+                </div>
             </div>
 
             <div class="projetos-card">
                 <img src="../assets/img/rpg.png" alt="RPG em Python" class="projetos-img">
-                <h3 class="projetos-nome">RPG de Texto em Python</h3>
-                <p class="projetos-descricao">Jogo estilo RPG de texto, desenvolvido em Python para a competição de jogos da SeComp 2022.</p>
-                <a href="https://github.com/JonasEduard0/RPG-basico-em-Python" target="_blank">Repositório</a>
+                <div class="conteudo-container">
+                    <h3 class="projetos-nome">RPG de Texto em Python</h3>
+                    <p class="projetos-descricao">Jogo estilo RPG de texto, desenvolvido em Python para a competição de jogos da SeComp 2022.</p>
+                    <a href="https://github.com/JonasEduard0/RPG-basico-em-Python" target="_blank">Repositório</a>
+                </div>
             </div>
         </div>
     </section>
@@ -113,7 +125,7 @@
     </section>
 
     <footer>
-        <p>© 2026 Jonas Eduardo. Todos os direitos reservados.</p>
+        
     </footer>
 
     <script src="script.js"></script>
