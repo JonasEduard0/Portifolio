@@ -81,6 +81,13 @@ body{
     width: 100%;
 }
 
+#language{
+    background-color: rgba(15, 23, 42, 0.8);
+    color: var(--txt-claro);
+    position: absolute;
+    right: 50px;
+}
+
 #foto{
     width: 350px;
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
