@@ -175,20 +175,20 @@ body{
     margin-bottom: 5px;
 }
 
+#projetos-container a{
+    color: #833bff;
+    line-height: 35px;
+}
+
 .projetos-descricao{
     color: #f5f5f5d0;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
 }
 
 .conteudo-container{
     padding: 1.5rem;
     text-decoration: none;
     
-}
-
-#formacao-titulo{
-    text-align: center;
-    font-size: 2.3rem;
 }
 
 
@@ -200,7 +200,34 @@ body{
 #contato-titulo{
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+#contato-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#contato-container > a{
+    text-decoration: none;
+    font-size: 40px;
+}
+
+#github{
+    color: white;
+}
+
+#linkedin{
+    color: rgb(0, 102, 255);
+}
+
+#whatsapp{
+    color: rgb(2, 197, 2);
+}
+
+#email{
+    color: white;
 }
 
 @keyframes flutuante{
@@ -212,4 +239,3 @@ body{
         transform: translateY(-20px);
     }
 }
-
