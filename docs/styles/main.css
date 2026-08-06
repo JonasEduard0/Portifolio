@@ -82,10 +82,17 @@ body{
 }
 
 #language{
-    background-color: rgba(15, 23, 42, 0.8);
-    color: var(--txt-claro);
-    position: absolute;
-    right: 50px;
+    background:none;
+    border:none;
+    color:var(--txt-claro);
+    cursor:pointer;
+    font-size:1.6rem;
+    position:absolute;
+    right:50px;
+}
+
+#language:hover{
+    color:#7c5cff;
 }
 
 #foto{
@@ -159,7 +166,7 @@ body{
 
 #projetos-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -294,6 +301,10 @@ body{
 
 #email{
     color: white;
+}
+
+#curriculo-print{
+    display:none;
 }
 
 @keyframes flutuante{

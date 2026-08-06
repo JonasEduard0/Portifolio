@@ -1,0 +1,19 @@
+@media print{
+
+    body > *{
+        display:none !important;
+    }
+
+    #curriculo-print{
+        display:block !important;
+        margin:0;
+        padding:0;
+    }
+
+    #curriculo-print img{
+        display:block;
+        width:100%;
+        height:auto;
+    }
+
+}

@@ -24,20 +24,10 @@ const translations = {
             "Sistema que permite cadastrar músicas, álbuns e artistas, consultar e remover registros. Desenvolvido em Java Swing com interface gráfica.",
         projeto1Link: "Repositório",
 
-        projeto2Nome: "Café com Inglês",
+        projeto2Nome: "RPG de Texto",
         projeto2Desc:
-            "Projeto de ensino de inglês básico ao avançado aberto à comunidade.",
-        projeto2Link: "Instagram do projeto",
-
-        projeto3Nome: "FashionStore",
-        projeto3Desc:
-            "Sistema para digitalizar os processos de gestão de uma loja de roupas em Java. Atualmente em desenvolvimento pelo grupo RootDevs.",
-        projeto3Link: "Repositório (em desenvolvimento)",
-
-        projeto4Nome: "RPG de Texto",
-        projeto4Desc:
             "Jogo de RPG em texto desenvolvido em Python para a competição SeComp 2022.",
-        projeto4Link: "Repositório",
+        projeto2Link: "Repositório",
 
         formacaoTitulo: "Formação",
 
@@ -70,20 +60,10 @@ const translations = {
             "Application for managing songs, albums and artists. Built with Java Swing and a graphical interface.",
         projeto1Link: "Repository",
 
-        projeto2Nome: "Coffee with English",
+        projeto2Nome: "Text RPG",
         projeto2Desc:
-            "Community project that teaches English from beginner to advanced levels.",
-        projeto2Link: "Project Instagram",
-
-        projeto3Nome: "FashionStore",
-        projeto3Desc:
-            "Java application that digitizes clothing store management. Currently under development by RootDevs.",
-        projeto3Link: "Repository (under development)",
-
-        projeto4Nome: "Text RPG",
-        projeto4Desc:
             "Text-based RPG game developed in Python for the SeComp 2022 competition.",
-        projeto4Link: "Repository",
+        projeto2Link: "Repository",
 
         formacaoTitulo: "Education",
 
@@ -139,7 +119,7 @@ function translate(lang) {
     // Contato
     document.getElementById("contato-titulo").textContent = translations[lang].contatoTitulo;
 
-    languageBtn.textContent = translations[lang].language;
+    languageBtn.title = currentLanguage === "pt"? "English": "Português";
 }
 
 translate(currentLanguage);
