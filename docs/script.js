@@ -127,14 +127,6 @@ function translate(lang) {
     cards[1].querySelector("p").textContent = translations[lang].projeto2Desc;
     cards[1].querySelector("a").textContent = translations[lang].projeto2Link;
 
-    cards[2].querySelector("h3").textContent = translations[lang].projeto3Nome;
-    cards[2].querySelector("p").textContent = translations[lang].projeto3Desc;
-    cards[2].querySelector("a").textContent = translations[lang].projeto3Link;
-
-    cards[3].querySelector("h3").textContent = translations[lang].projeto4Nome;
-    cards[3].querySelector("p").textContent = translations[lang].projeto4Desc;
-    cards[3].querySelector("a").textContent = translations[lang].projeto4Link;
-
     // Formação
     document.getElementById("formacao-titulo").textContent = translations[lang].formacaoTitulo;
 
