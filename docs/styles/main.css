@@ -166,7 +166,8 @@ body{
 
 #projetos-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(600px, 650px));
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -182,7 +183,7 @@ body{
 .projetos-img{
     height: 300px;
     width: 100%;
-    object-fit:fill; /* Faz oq? */
+    object-fit:fill;
 }
 
 .projetos-nome{
