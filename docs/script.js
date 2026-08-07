@@ -5,7 +5,6 @@ const translations = {
     pt: {
         language: "PT",
 
-        start: "Início",
         about: "Sobre",
         project: "Projetos",
         education: "Formação",
@@ -15,7 +14,7 @@ const translations = {
 
         sobreTitulo: "Sobre Mim",
         sobreTexto:
-            "Olá! Meu nome é Jonas Eduardo, sou um estudante de Ciência da Computação e desenvolvedor Front-End, estudando para Full-Stack. Formado em Técnico em Informática Integrado ao Ensino Médio, tenho experiência em projetos pessoais e em grupos.",
+            "Olá! Meu nome é Jonas Eduardo, um desenvolvedor Front-End cursando Ciência da Computação, estudando para Full-Stack. Formado em Técnico em Informática integrado ao Ensino Médio, tenho experiência em projetos pessoais e em grupos, como um sistema de irrigação automática com Arduíno, em C; bem como um Software de avaliação física de discentes para uma faculdade de Educação Física. Já desenvolvi em JavaScript, Vue.js, SQL, C++ e Java.",
 
         projetosTitulo: "Projetos",
 
@@ -41,7 +40,6 @@ const translations = {
     en: {
         language: "EN",
 
-        start: "Home",
         about: "About",
         project: "Projects",
         education: "Education",
@@ -51,7 +49,7 @@ const translations = {
 
         sobreTitulo: "About Me",
         sobreTexto:
-            "Hi! My name is Jonas Eduardo. I'm a Computer Science student and Front-End developer, currently studying to become a Full-Stack developer. I graduated as an IT Technician and have experience in personal and team projects.",
+            "Hello! My name is Jonas Eduardo. I’m a front-end developer currently pursuing a degree in Computer Science and training to become a full-stack developer. I hold a technical diploma in Computer Science (integrated with high school), and I have experience with both personal and group projects, such as an automatic irrigation system using Arduino, written in C, as well as software for evaluating students’ physical fitness for a physical education college. I have developed using JavaScript, Vue.js, SQL, C++, and Java.",
 
         projetosTitulo: "Projects",
 
@@ -80,21 +78,16 @@ let currentLanguage = localStorage.getItem("language") || "pt";
 
 function translate(lang) {
 
-    // Menu
-    document.getElementById("start").textContent = translations[lang].start;
     document.getElementById("about").textContent = translations[lang].about;
     document.getElementById("project").textContent = translations[lang].project;
     document.getElementById("education").textContent = translations[lang].education;
     document.getElementById("contact").textContent = translations[lang].contact;
 
-    // Home
     document.getElementById("descricao").textContent = translations[lang].descricao;
 
-    // Sobre
     document.getElementById("sobre-titulo").textContent = translations[lang].sobreTitulo;
     document.getElementById("sobre-texto").textContent = translations[lang].sobreTexto;
 
-    // Projetos
     document.getElementById("projetos-titulo").textContent = translations[lang].projetosTitulo;
 
     const cards = document.querySelectorAll(".projetos-card");
@@ -107,29 +100,22 @@ function translate(lang) {
     cards[1].querySelector("p").textContent = translations[lang].projeto2Desc;
     cards[1].querySelector("a").textContent = translations[lang].projeto2Link;
 
-    // Formação
     document.getElementById("formacao-titulo").textContent = translations[lang].formacaoTitulo;
 
     const timeline = document.querySelectorAll(".timeline-content");
 
     timeline[0].querySelector("h3").textContent = translations[lang].curso1;
-
     timeline[1].querySelector("h3").textContent = translations[lang].curso2;
 
-    // Contato
     document.getElementById("contato-titulo").textContent = translations[lang].contatoTitulo;
-
     languageBtn.title = currentLanguage === "pt"? "English": "Português";
 }
 
 translate(currentLanguage);
 
 languageBtn.addEventListener("click", () => {
-
     currentLanguage = currentLanguage === "pt" ? "en" : "pt";
-
+    
     localStorage.setItem("language", currentLanguage);
-
     translate(currentLanguage);
-
 });
